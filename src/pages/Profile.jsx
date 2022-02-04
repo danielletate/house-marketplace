@@ -26,7 +26,7 @@ function Profile() {
   const onSubmit = async () => {
     try {
       if (auth.currentUser.displayName !== name) {
-        // Update display name in fb
+        // Update display name in firebase
         await updateProfile(auth.currentUser, {
           displayName: name,
         });
@@ -74,7 +74,7 @@ function Profile() {
         </div>
 
         <div className="profileCard">
-          <form>
+          <form onSubmit={onSubmit}>
             <input
               type="text"
               id="name"
