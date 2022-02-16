@@ -12,7 +12,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import CreateListing from "./pages/CreateListing";
 import Listing from "./pages/Listing";
-import Contact from "./pages/Contact";
+import EditListing from "./pages/EditListing";
 
 function App() {
   return (
@@ -34,6 +34,8 @@ function App() {
             element={<Listing />}
           />
           <Route path="/contact/:landlordId" element={<contact />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/edit-listing/:listingId" element={<EditListing />} />
         </Routes>
         <Navbar />
       </Router>
